@@ -58,6 +58,7 @@
             this.gbXmlDefinition = new System.Windows.Forms.GroupBox();
             this.XmlFilePath = new RocksmithToolkitGUI.CueTextBox();
             this.gbArrInfo = new System.Windows.Forms.GroupBox();
+            this.tuningEditButton = new System.Windows.Forms.Button();
             this.BonusCheckBox = new System.Windows.Forms.CheckBox();
             this.gbTuningPitch = new System.Windows.Forms.GroupBox();
             this.noteDisplay = new System.Windows.Forms.Label();
@@ -73,7 +74,23 @@
             this.routeMaskBassRadio = new System.Windows.Forms.RadioButton();
             this.routeMaskRhythmRadio = new System.Windows.Forms.RadioButton();
             this.routeMaskLeadRadio = new System.Windows.Forms.RadioButton();
-            this.tuningEditButton = new System.Windows.Forms.Button();
+            this.lessonGBFiles = new System.Windows.Forms.GroupBox();
+            this.customLUATB = new RocksmithToolkitGUI.CueTextBox();
+            this.audioPathTB = new RocksmithToolkitGUI.CueTextBox();
+            this.openAudioButton = new System.Windows.Forms.Button();
+            this.customLUAButton = new System.Windows.Forms.Button();
+            this.LessonGB = new System.Windows.Forms.GroupBox();
+            this.EtudeNameTB = new RocksmithToolkitGUI.CueTextBox();
+            this.GENameTB = new RocksmithToolkitGUI.CueTextBox();
+            this.LessonSubHeader = new RocksmithToolkitGUI.CueTextBox();
+            this.LessonDisplayName = new RocksmithToolkitGUI.CueTextBox();
+            this.LessonNumberTB = new RocksmithToolkitGUI.CueTextBox();
+            this.ArtistSortTB = new RocksmithToolkitGUI.CueTextBox();
+            this.LessonCheckBox = new System.Windows.Forms.CheckBox();
+            this.VideoCheckBox = new System.Windows.Forms.CheckBox();
+            this.VideoFilePath = new RocksmithToolkitGUI.CueTextBox();
+            this.VideoFolderButtom = new System.Windows.Forms.Button();
+            this.LessonDescriptionTB = new RocksmithToolkitGUI.CueTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.scrollSpeedTrackBar)).BeginInit();
             this.gbTone.SuspendLayout();
             this.gbDLCId.SuspendLayout();
@@ -82,6 +99,8 @@
             this.gbTuningPitch.SuspendLayout();
             this.gbScrollSpeed.SuspendLayout();
             this.gbGameplayPath.SuspendLayout();
+            this.lessonGBFiles.SuspendLayout();
+            this.LessonGB.SuspendLayout();
             this.SuspendLayout();
             // 
             // songXmlBrowseButton
@@ -98,7 +117,7 @@
             // 
             this.addArrangementButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.addArrangementButton.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.addArrangementButton.Location = new System.Drawing.Point(291, 425);
+            this.addArrangementButton.Location = new System.Drawing.Point(290, 575);
             this.addArrangementButton.Name = "addArrangementButton";
             this.addArrangementButton.Size = new System.Drawing.Size(72, 29);
             this.addArrangementButton.TabIndex = 20;
@@ -131,7 +150,7 @@
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.cancelButton.Location = new System.Drawing.Point(369, 425);
+            this.cancelButton.Location = new System.Drawing.Point(368, 575);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(72, 29);
             this.cancelButton.TabIndex = 21;
@@ -144,7 +163,7 @@
             this.toneBaseCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.toneBaseCombo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toneBaseCombo.FormattingEnabled = true;
-            this.toneBaseCombo.Location = new System.Drawing.Point(72, 19);
+            this.toneBaseCombo.Location = new System.Drawing.Point(70, 18);
             this.toneBaseCombo.Margin = new System.Windows.Forms.Padding(2);
             this.toneBaseCombo.Name = "toneBaseCombo";
             this.toneBaseCombo.Size = new System.Drawing.Size(134, 21);
@@ -201,7 +220,7 @@
             // 
             this.Picked.AutoSize = true;
             this.Picked.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Picked.Location = new System.Drawing.Point(54, 122);
+            this.Picked.Location = new System.Drawing.Point(123, 99);
             this.Picked.Name = "Picked";
             this.Picked.Size = new System.Drawing.Size(85, 17);
             this.Picked.TabIndex = 7;
@@ -262,9 +281,9 @@
             this.gbTone.Controls.Add(this.lblToneA);
             this.gbTone.Controls.Add(this.toneBaseCombo);
             this.gbTone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.gbTone.Location = new System.Drawing.Point(6, 267);
+            this.gbTone.Location = new System.Drawing.Point(8, 228);
             this.gbTone.Name = "gbTone";
-            this.gbTone.Size = new System.Drawing.Size(435, 96);
+            this.gbTone.Size = new System.Drawing.Size(435, 92);
             this.gbTone.TabIndex = 42;
             this.gbTone.TabStop = false;
             this.gbTone.Text = "Tone Selector";
@@ -285,7 +304,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(217, 50);
+            this.label10.Location = new System.Drawing.Point(215, 49);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 13);
@@ -297,7 +316,7 @@
             this.toneDCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.toneDCombo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toneDCombo.FormattingEnabled = true;
-            this.toneDCombo.Location = new System.Drawing.Point(291, 47);
+            this.toneDCombo.Location = new System.Drawing.Point(289, 46);
             this.toneDCombo.Margin = new System.Windows.Forms.Padding(2);
             this.toneDCombo.Name = "toneDCombo";
             this.toneDCombo.Size = new System.Drawing.Size(134, 21);
@@ -307,7 +326,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(217, 25);
+            this.label11.Location = new System.Drawing.Point(215, 24);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 13);
@@ -319,7 +338,7 @@
             this.toneCCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.toneCCombo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toneCCombo.FormattingEnabled = true;
-            this.toneCCombo.Location = new System.Drawing.Point(291, 22);
+            this.toneCCombo.Location = new System.Drawing.Point(289, 21);
             this.toneCCombo.Margin = new System.Windows.Forms.Padding(2);
             this.toneCCombo.Name = "toneCCombo";
             this.toneCCombo.Size = new System.Drawing.Size(134, 21);
@@ -330,7 +349,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(6, 50);
+            this.label9.Location = new System.Drawing.Point(4, 49);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 13);
@@ -342,7 +361,7 @@
             this.toneBCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.toneBCombo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toneBCombo.FormattingEnabled = true;
-            this.toneBCombo.Location = new System.Drawing.Point(72, 47);
+            this.toneBCombo.Location = new System.Drawing.Point(70, 46);
             this.toneBCombo.Margin = new System.Windows.Forms.Padding(2);
             this.toneBCombo.Name = "toneBCombo";
             this.toneBCombo.Size = new System.Drawing.Size(134, 21);
@@ -353,7 +372,7 @@
             // 
             this.lblToneA.AutoSize = true;
             this.lblToneA.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblToneA.Location = new System.Drawing.Point(6, 22);
+            this.lblToneA.Location = new System.Drawing.Point(4, 21);
             this.lblToneA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblToneA.Name = "lblToneA";
             this.lblToneA.Size = new System.Drawing.Size(34, 13);
@@ -365,7 +384,7 @@
             this.gbDLCId.Controls.Add(this.PersistentId);
             this.gbDLCId.Controls.Add(this.MasterId);
             this.gbDLCId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.gbDLCId.Location = new System.Drawing.Point(6, 369);
+            this.gbDLCId.Location = new System.Drawing.Point(5, 522);
             this.gbDLCId.Name = "gbDLCId";
             this.gbDLCId.Size = new System.Drawing.Size(435, 47);
             this.gbDLCId.TabIndex = 33;
@@ -431,16 +450,26 @@
             this.gbArrInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.gbArrInfo.Location = new System.Drawing.Point(6, 64);
             this.gbArrInfo.Name = "gbArrInfo";
-            this.gbArrInfo.Size = new System.Drawing.Size(435, 147);
+            this.gbArrInfo.Size = new System.Drawing.Size(435, 130);
             this.gbArrInfo.TabIndex = 45;
             this.gbArrInfo.TabStop = false;
             this.gbArrInfo.Text = "Arrangement Information";
+            // 
+            // tuningEditButton
+            // 
+            this.tuningEditButton.Location = new System.Drawing.Point(178, 67);
+            this.tuningEditButton.Name = "tuningEditButton";
+            this.tuningEditButton.Size = new System.Drawing.Size(28, 23);
+            this.tuningEditButton.TabIndex = 2;
+            this.tuningEditButton.Text = "...";
+            this.tuningEditButton.UseVisualStyleBackColor = true;
+            this.tuningEditButton.Click += new System.EventHandler(this.tuningEditButton_Click);
             // 
             // BonusCheckBox
             // 
             this.BonusCheckBox.AutoSize = true;
             this.BonusCheckBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BonusCheckBox.Location = new System.Drawing.Point(54, 99);
+            this.BonusCheckBox.Location = new System.Drawing.Point(2, 99);
             this.BonusCheckBox.Name = "BonusCheckBox";
             this.BonusCheckBox.Size = new System.Drawing.Size(119, 17);
             this.BonusCheckBox.TabIndex = 44;
@@ -457,9 +486,9 @@
             this.gbTuningPitch.Controls.Add(this.label7);
             this.gbTuningPitch.Controls.Add(this.label13);
             this.gbTuningPitch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.gbTuningPitch.Location = new System.Drawing.Point(214, 79);
+            this.gbTuningPitch.Location = new System.Drawing.Point(214, 70);
             this.gbTuningPitch.Name = "gbTuningPitch";
-            this.gbTuningPitch.Size = new System.Drawing.Size(211, 60);
+            this.gbTuningPitch.Size = new System.Drawing.Size(211, 55);
             this.gbTuningPitch.TabIndex = 43;
             this.gbTuningPitch.TabStop = false;
             this.gbTuningPitch.Text = "Tuning Pitch";
@@ -554,7 +583,7 @@
             this.gbScrollSpeed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.gbScrollSpeed.Location = new System.Drawing.Point(214, 12);
             this.gbScrollSpeed.Name = "gbScrollSpeed";
-            this.gbScrollSpeed.Size = new System.Drawing.Size(211, 60);
+            this.gbScrollSpeed.Size = new System.Drawing.Size(211, 52);
             this.gbScrollSpeed.TabIndex = 42;
             this.gbScrollSpeed.TabStop = false;
             this.gbScrollSpeed.Text = "Scroll Speed";
@@ -566,9 +595,9 @@
             this.gbGameplayPath.Controls.Add(this.routeMaskRhythmRadio);
             this.gbGameplayPath.Controls.Add(this.routeMaskLeadRadio);
             this.gbGameplayPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.gbGameplayPath.Location = new System.Drawing.Point(6, 217);
+            this.gbGameplayPath.Location = new System.Drawing.Point(6, 195);
             this.gbGameplayPath.Name = "gbGameplayPath";
-            this.gbGameplayPath.Size = new System.Drawing.Size(435, 44);
+            this.gbGameplayPath.Size = new System.Drawing.Size(435, 33);
             this.gbGameplayPath.TabIndex = 34;
             this.gbGameplayPath.TabStop = false;
             this.gbGameplayPath.Text = "Gameplay Path";
@@ -578,7 +607,7 @@
             this.routeMaskNoneRadio.AutoSize = true;
             this.routeMaskNoneRadio.Checked = true;
             this.routeMaskNoneRadio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.routeMaskNoneRadio.Location = new System.Drawing.Point(322, 19);
+            this.routeMaskNoneRadio.Location = new System.Drawing.Point(344, 10);
             this.routeMaskNoneRadio.Name = "routeMaskNoneRadio";
             this.routeMaskNoneRadio.Size = new System.Drawing.Size(51, 17);
             this.routeMaskNoneRadio.TabIndex = 11;
@@ -590,7 +619,7 @@
             // 
             this.routeMaskBassRadio.AutoSize = true;
             this.routeMaskBassRadio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.routeMaskBassRadio.Location = new System.Drawing.Point(243, 19);
+            this.routeMaskBassRadio.Location = new System.Drawing.Point(265, 10);
             this.routeMaskBassRadio.Name = "routeMaskBassRadio";
             this.routeMaskBassRadio.Size = new System.Drawing.Size(48, 17);
             this.routeMaskBassRadio.TabIndex = 10;
@@ -601,7 +630,7 @@
             // 
             this.routeMaskRhythmRadio.AutoSize = true;
             this.routeMaskRhythmRadio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.routeMaskRhythmRadio.Location = new System.Drawing.Point(156, 19);
+            this.routeMaskRhythmRadio.Location = new System.Drawing.Point(178, 10);
             this.routeMaskRhythmRadio.Name = "routeMaskRhythmRadio";
             this.routeMaskRhythmRadio.Size = new System.Drawing.Size(61, 17);
             this.routeMaskRhythmRadio.TabIndex = 9;
@@ -612,27 +641,204 @@
             // 
             this.routeMaskLeadRadio.AutoSize = true;
             this.routeMaskLeadRadio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.routeMaskLeadRadio.Location = new System.Drawing.Point(72, 19);
+            this.routeMaskLeadRadio.Location = new System.Drawing.Point(87, 10);
             this.routeMaskLeadRadio.Name = "routeMaskLeadRadio";
             this.routeMaskLeadRadio.Size = new System.Drawing.Size(49, 17);
             this.routeMaskLeadRadio.TabIndex = 8;
             this.routeMaskLeadRadio.Text = "Lead";
             this.routeMaskLeadRadio.UseVisualStyleBackColor = true;
             // 
-            // tuningEditButton
+            // lessonGBFiles
             // 
-            this.tuningEditButton.Location = new System.Drawing.Point(178, 67);
-            this.tuningEditButton.Name = "tuningEditButton";
-            this.tuningEditButton.Size = new System.Drawing.Size(28, 23);
-            this.tuningEditButton.TabIndex = 2;
-            this.tuningEditButton.Text = "...";
-            this.tuningEditButton.UseVisualStyleBackColor = true;
-            this.tuningEditButton.Click += new System.EventHandler(this.tuningEditButton_Click);
+            this.lessonGBFiles.Controls.Add(this.VideoFilePath);
+            this.lessonGBFiles.Controls.Add(this.VideoFolderButtom);
+            this.lessonGBFiles.Controls.Add(this.customLUATB);
+            this.lessonGBFiles.Controls.Add(this.audioPathTB);
+            this.lessonGBFiles.Controls.Add(this.openAudioButton);
+            this.lessonGBFiles.Controls.Add(this.customLUAButton);
+            this.lessonGBFiles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lessonGBFiles.Location = new System.Drawing.Point(6, 428);
+            this.lessonGBFiles.Name = "lessonGBFiles";
+            this.lessonGBFiles.Size = new System.Drawing.Size(437, 94);
+            this.lessonGBFiles.TabIndex = 79;
+            this.lessonGBFiles.TabStop = false;
+            this.lessonGBFiles.Text = "Lesson Files";
+            // 
+            // customLUATB
+            // 
+            this.customLUATB.BackColor = System.Drawing.SystemColors.Window;
+            this.customLUATB.Cue = "Custom LUA (if not using default)";
+            this.customLUATB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.customLUATB.ForeColor = System.Drawing.Color.Gray;
+            this.customLUATB.Location = new System.Drawing.Point(6, 19);
+            this.customLUATB.Name = "customLUATB";
+            this.customLUATB.Size = new System.Drawing.Size(366, 20);
+            this.customLUATB.TabIndex = 23;
+            // 
+            // audioPathTB
+            // 
+            this.audioPathTB.Cue = "Converted audio on Wwise 2013 for Windows, Mac, XBox360 or PS3 (*.wem)";
+            this.audioPathTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.audioPathTB.ForeColor = System.Drawing.Color.Gray;
+            this.audioPathTB.Location = new System.Drawing.Point(6, 45);
+            this.audioPathTB.Name = "audioPathTB";
+            this.audioPathTB.Size = new System.Drawing.Size(366, 20);
+            this.audioPathTB.TabIndex = 25;
+            // 
+            // openAudioButton
+            // 
+            this.openAudioButton.Location = new System.Drawing.Point(393, 44);
+            this.openAudioButton.Name = "openAudioButton";
+            this.openAudioButton.Size = new System.Drawing.Size(34, 23);
+            this.openAudioButton.TabIndex = 26;
+            this.openAudioButton.Text = "...";
+            this.openAudioButton.UseVisualStyleBackColor = true;
+            // 
+            // customLUAButton
+            // 
+            this.customLUAButton.Location = new System.Drawing.Point(393, 19);
+            this.customLUAButton.Name = "customLUAButton";
+            this.customLUAButton.Size = new System.Drawing.Size(34, 23);
+            this.customLUAButton.TabIndex = 24;
+            this.customLUAButton.Text = "...";
+            this.customLUAButton.UseVisualStyleBackColor = true;
+            // 
+            // LessonGB
+            // 
+            this.LessonGB.Controls.Add(this.LessonDescriptionTB);
+            this.LessonGB.Controls.Add(this.VideoCheckBox);
+            this.LessonGB.Controls.Add(this.LessonCheckBox);
+            this.LessonGB.Controls.Add(this.EtudeNameTB);
+            this.LessonGB.Controls.Add(this.GENameTB);
+            this.LessonGB.Controls.Add(this.LessonSubHeader);
+            this.LessonGB.Controls.Add(this.LessonDisplayName);
+            this.LessonGB.Controls.Add(this.LessonNumberTB);
+            this.LessonGB.Controls.Add(this.ArtistSortTB);
+            this.LessonGB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.LessonGB.Location = new System.Drawing.Point(6, 324);
+            this.LessonGB.Name = "LessonGB";
+            this.LessonGB.Size = new System.Drawing.Size(437, 98);
+            this.LessonGB.TabIndex = 82;
+            this.LessonGB.TabStop = false;
+            this.LessonGB.Text = "Lesson Information";
+            // 
+            // EtudeNameTB
+            // 
+            this.EtudeNameTB.Cue = "Etude Name";
+            this.EtudeNameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.EtudeNameTB.ForeColor = System.Drawing.Color.Gray;
+            this.EtudeNameTB.Location = new System.Drawing.Point(6, 19);
+            this.EtudeNameTB.Name = "EtudeNameTB";
+            this.EtudeNameTB.Size = new System.Drawing.Size(117, 20);
+            this.EtudeNameTB.TabIndex = 7;
+            // 
+            // GENameTB
+            // 
+            this.GENameTB.Cue = "GE Name";
+            this.GENameTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.GENameTB.ForeColor = System.Drawing.Color.Gray;
+            this.GENameTB.Location = new System.Drawing.Point(129, 19);
+            this.GENameTB.Name = "GENameTB";
+            this.GENameTB.Size = new System.Drawing.Size(160, 20);
+            this.GENameTB.TabIndex = 8;
+            // 
+            // LessonSubHeader
+            // 
+            this.LessonSubHeader.Cue = "Lesson Sub Header";
+            this.LessonSubHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.LessonSubHeader.ForeColor = System.Drawing.Color.Gray;
+            this.LessonSubHeader.Location = new System.Drawing.Point(129, 43);
+            this.LessonSubHeader.Name = "LessonSubHeader";
+            this.LessonSubHeader.Size = new System.Drawing.Size(160, 20);
+            this.LessonSubHeader.TabIndex = 11;
+            // 
+            // LessonDisplayName
+            // 
+            this.LessonDisplayName.Cue = "Lesson Display Name";
+            this.LessonDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.LessonDisplayName.ForeColor = System.Drawing.Color.Gray;
+            this.LessonDisplayName.Location = new System.Drawing.Point(6, 43);
+            this.LessonDisplayName.Name = "LessonDisplayName";
+            this.LessonDisplayName.Size = new System.Drawing.Size(117, 20);
+            this.LessonDisplayName.TabIndex = 10;
+            // 
+            // LessonNumberTB
+            // 
+            this.LessonNumberTB.Cue = "Lesson Number";
+            this.LessonNumberTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.LessonNumberTB.ForeColor = System.Drawing.Color.Gray;
+            this.LessonNumberTB.Location = new System.Drawing.Point(295, 19);
+            this.LessonNumberTB.Name = "LessonNumberTB";
+            this.LessonNumberTB.Size = new System.Drawing.Size(132, 20);
+            this.LessonNumberTB.TabIndex = 9;
+            // 
+            // ArtistSortTB
+            // 
+            this.ArtistSortTB.Cue = "Lesson Sort Number";
+            this.ArtistSortTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ArtistSortTB.ForeColor = System.Drawing.Color.Gray;
+            this.ArtistSortTB.Location = new System.Drawing.Point(295, 43);
+            this.ArtistSortTB.Name = "ArtistSortTB";
+            this.ArtistSortTB.Size = new System.Drawing.Size(132, 20);
+            this.ArtistSortTB.TabIndex = 12;
+            // 
+            // LessonCheckBox
+            // 
+            this.LessonCheckBox.AutoSize = true;
+            this.LessonCheckBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LessonCheckBox.Location = new System.Drawing.Point(6, 69);
+            this.LessonCheckBox.Name = "LessonCheckBox";
+            this.LessonCheckBox.Size = new System.Drawing.Size(60, 17);
+            this.LessonCheckBox.TabIndex = 45;
+            this.LessonCheckBox.Text = "Lesson";
+            this.LessonCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // VideoCheckBox
+            // 
+            this.VideoCheckBox.AutoSize = true;
+            this.VideoCheckBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.VideoCheckBox.Location = new System.Drawing.Point(72, 69);
+            this.VideoCheckBox.Name = "VideoCheckBox";
+            this.VideoCheckBox.Size = new System.Drawing.Size(53, 17);
+            this.VideoCheckBox.TabIndex = 46;
+            this.VideoCheckBox.Text = "Video";
+            this.VideoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // VideoFilePath
+            // 
+            this.VideoFilePath.Cue = "Converted Video Bink2";
+            this.VideoFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.VideoFilePath.ForeColor = System.Drawing.Color.Gray;
+            this.VideoFilePath.Location = new System.Drawing.Point(5, 71);
+            this.VideoFilePath.Name = "VideoFilePath";
+            this.VideoFilePath.Size = new System.Drawing.Size(366, 20);
+            this.VideoFilePath.TabIndex = 27;
+            // 
+            // VideoFolderButtom
+            // 
+            this.VideoFolderButtom.Location = new System.Drawing.Point(392, 70);
+            this.VideoFolderButtom.Name = "VideoFolderButtom";
+            this.VideoFolderButtom.Size = new System.Drawing.Size(34, 23);
+            this.VideoFolderButtom.TabIndex = 28;
+            this.VideoFolderButtom.Text = "...";
+            this.VideoFolderButtom.UseVisualStyleBackColor = true;
+            // 
+            // LessonDescriptionTB
+            // 
+            this.LessonDescriptionTB.Cue = "Lesson Discription";
+            this.LessonDescriptionTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.LessonDescriptionTB.ForeColor = System.Drawing.Color.Gray;
+            this.LessonDescriptionTB.Location = new System.Drawing.Point(131, 66);
+            this.LessonDescriptionTB.Name = "LessonDescriptionTB";
+            this.LessonDescriptionTB.Size = new System.Drawing.Size(296, 20);
+            this.LessonDescriptionTB.TabIndex = 47;
             // 
             // ArrangementForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(450, 466);
+            this.ClientSize = new System.Drawing.Size(449, 616);
+            this.Controls.Add(this.LessonGB);
+            this.Controls.Add(this.lessonGBFiles);
             this.Controls.Add(this.gbGameplayPath);
             this.Controls.Add(this.gbArrInfo);
             this.Controls.Add(this.gbXmlDefinition);
@@ -660,6 +866,10 @@
             this.gbScrollSpeed.PerformLayout();
             this.gbGameplayPath.ResumeLayout(false);
             this.gbGameplayPath.PerformLayout();
+            this.lessonGBFiles.ResumeLayout(false);
+            this.lessonGBFiles.PerformLayout();
+            this.LessonGB.ResumeLayout(false);
+            this.LessonGB.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -718,5 +928,22 @@
         private System.Windows.Forms.CheckBox BonusCheckBox;
         private System.Windows.Forms.CheckBox disableTonesCheckbox;
         private System.Windows.Forms.Button tuningEditButton;
+        private System.Windows.Forms.GroupBox lessonGBFiles;
+        private CueTextBox customLUATB;
+        private CueTextBox audioPathTB;
+        private System.Windows.Forms.Button openAudioButton;
+        private System.Windows.Forms.Button customLUAButton;
+        private System.Windows.Forms.GroupBox LessonGB;
+        private CueTextBox EtudeNameTB;
+        private CueTextBox GENameTB;
+        private CueTextBox LessonSubHeader;
+        private CueTextBox LessonDisplayName;
+        private CueTextBox LessonNumberTB;
+        private CueTextBox ArtistSortTB;
+        private System.Windows.Forms.CheckBox LessonCheckBox;
+        private System.Windows.Forms.CheckBox VideoCheckBox;
+        private CueTextBox VideoFilePath;
+        private System.Windows.Forms.Button VideoFolderButtom;
+        private CueTextBox LessonDescriptionTB;
     }
 }
