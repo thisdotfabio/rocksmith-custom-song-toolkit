@@ -83,6 +83,7 @@
     <Compile Include="Song2014ToTab\Rs2014Converter.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ToolkitVersion.cs" />
     <Compile Include="ToolkitVersionOnline.cs" />
     <Compile Include="DLCPackage\DLCPackageConverter.cs" />
     <Compile Include="DLCPackage\SongPartition.cs" />
