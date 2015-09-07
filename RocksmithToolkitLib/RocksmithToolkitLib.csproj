@@ -26,7 +26,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <WarningLevel>4</WarningLevel>
     <Optimize>true</Optimize>
-	<DebugType>pdbonly</DebugType>
+    <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib">
@@ -172,7 +172,6 @@
     </Compile>
     <Compile Include="Sng\SngFile.cs" />
     <Compile Include="Sng\SngFileWriter.cs" />
-    <Compile Include="ToolkitVersion.cs" />
     <Compile Include="XmlRepository\Config.cs" />
     <Compile Include="XmlRepository\ConfigRepository.cs" />
     <Compile Include="XmlRepository\TuningDefinitionRepository.cs" />
